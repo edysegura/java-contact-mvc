@@ -21,7 +21,7 @@ public class ContactController {
 	}
 
 	private void showMenu() {
-		Integer userChoice = view.menu();
+		Integer userChoice = view.getUserChoice();
 		switch (userChoice) {
 			case 1:
 				create();
@@ -32,28 +32,38 @@ public class ContactController {
 			break;
 			
 			case 3:
-				System.exit(0);
+				delete();
+			break;
+			
+			case 4:
+				exit();
 			break;
 
 			default:
+				view.invalidOption();
 			break;
 		}
+		showMenu();
+	}
+
+	private void exit() {
+		view.exitMessage();
+		System.exit(0);
+	}
+
+	private void delete() {
+		String email = view.getContactEmail();
+		dao.delete(email);
 	}
 
 	private void list() {
 		ArrayList<ContactTO> list = dao.getList();
 		view.showList(list);
-		showMenu();
 	}
 
 	private void create() {
 		ContactTO contact = view.getContactData();
 		dao.add(contact);
-		showMenu();		
 	}
 	
-	
-	
-	
-
 }

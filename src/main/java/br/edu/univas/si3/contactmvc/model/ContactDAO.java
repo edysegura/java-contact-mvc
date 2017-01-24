@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class ContactDAO {
 	
+	//its represents our database
 	private ArrayList<ContactTO> contacts;
 	
 	public ContactDAO() {
@@ -19,7 +20,19 @@ public class ContactDAO {
 		//should be here
 	}
 	
-	public void delete(ContactTO contact) {
+	public void delete(String emailToDelete) {
+		int index = 0;
+		String email = "";
+		
+		for (ContactTO contact : contacts) {
+			email = contact.getEmail();
+			
+			if(email.equals(emailToDelete)) {
+				contacts.remove(index);
+				break;
+			}
+			index++;
+		}
 	}
 	
 	@SuppressWarnings("unchecked")
