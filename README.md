@@ -1,18 +1,18 @@
-# Contact MVC
+# Java Contact Manager
 
-A simple contact manager example in Java using the architecture pattern MVC.
+A simple contact manager example using Java with the MVC architecture pattern.
 
 ## Instructions
 
-Assuming that you have JDK installed and in your path follow the commands below
+Assuming that you have JDK installed and added to your path in environment variables, follow the commands below.
 
 ### How to build on windows
 
-Run this command line ```gradlew build``` in the root folder
+Run this command line ```gradlew build``` on the root folder
 
 ### How to build on linux
 
-Run this command line ```./gradlew build``` in the root folder
+Run this command line ```./gradlew build``` on the root folder
 
 ### How to import in Eclipse IDE
 
