@@ -21,4 +21,3 @@ Run this command line ```./gradlew eclipse``` and then import the folder
 ### How to run after the built
 
 Run ```java -jar build/libs/java-contact-mvc-1.0.jar```
-
